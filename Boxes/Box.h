@@ -14,9 +14,14 @@
 @property (nonatomic) float width;
 @property (nonatomic) float length;
 
+
 //Method to initialize with parameters
 - (instancetype)initWithHeight:(float)height andWidth:(float)width andLength:(float)length;
 
 //Method to Calculate Volume
 - (float) calculateVolume;
+
+//Method to Calculate How Many Boxes Fit in The Larger Box
+- (float) boxInBox:(Box *)otherBox;
+
 @end

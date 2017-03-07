@@ -10,14 +10,7 @@
 
 @implementation Box
 
-- (instancetype)init {
-    if (self = [super init]) {
-        self.width = 0;
-        self.height = 0;
-        self.length = 0;
-    }
-    return self;
-}
+
 
 - (instancetype)initWithHeight:(float)height andWidth:(float)width andLength:(float)length
 {
@@ -34,5 +27,23 @@
 {
     return self.width * self.length * self.height;
 }
+
+//Method to Calculate How Many Boxes Fit in The Larger Box
+- (float) boxInBox:(Box *)otherBox
+{
+    float boxVol1 = self.calculateVolume;
+    float boxVol2 = otherBox.calculateVolume;
+       if (boxVol1 < boxVol2) {
+        NSLog(@"This box is larger. You can't fit any of these boxes in the other box");
+           return -1;
+    }else{
+        float bInB = boxVol1 / boxVol2;
+        return bInB;
+    }
+}
+
+
+
+
 
 @end
