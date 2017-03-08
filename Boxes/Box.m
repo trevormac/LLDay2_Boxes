@@ -10,8 +10,6 @@
 
 @implementation Box
 
-
-
 - (instancetype)initWithHeight:(float)height andWidth:(float)width andLength:(float)length
 {
     if (self = [super init]){
